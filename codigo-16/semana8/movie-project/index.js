@@ -1,9 +1,13 @@
 //Aqué estará la lógica del DOM
 
-import { getMovies } from "./service/index.js";
+import { getMovies, storeMovieMockApi, btnGetMovieFromMockApi } from "./service/index.js";
 
 const btnGetMovies = document.querySelector("#btn-get-movies");
 const containerMovies = document.querySelector("#container-movies");
+const btnSaveApi = document.querySelector("#btn-save-api");
+const btnGetMovieFromMockApi = document.querySelector("#btn-get-movies-mock-api");
+
+const moviesWithImage = [];
 
 btnGetMovies.onclick = async function () {
     const movies = await getMovies();
@@ -21,12 +25,28 @@ btnGetMovies.onclick = async function () {
             //si la peticion de la imagen está ok vamos a renderizar la pelicula
             renderMovie(movie);
         }
-        console.log(response);
+        
     });
     
 };
 
+btnGetMovieFromMockApi.onclick = function(){
+    const movies = await getMovieFromMockApi();
+    console.log(movies);
+};
+
+btnSaveApi.onclick = function (){
+    console.log(moviesWithImage);
+    moviesWithImage.forEach(async (movie) => {
+        await storeMovieMockApi(movie);
+    });
+};
+
 function renderMovie(movie) {
+    const movies = document.querySelectorAll("#container-movies .col");
+
+    if (movies.length === 20) return;
+    moviesWithImage.push(movie);
     containerMovies.innerHTML += `
     <div class="col">
         <div class="card my-3" >
@@ -46,4 +66,4 @@ function renderMovie(movie) {
         </div>
     </div>
     `
-}
+};
