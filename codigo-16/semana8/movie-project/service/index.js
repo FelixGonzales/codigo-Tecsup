@@ -14,7 +14,15 @@ export const getMovies = async () => {
         return error;
     }
 }
-
+export const getMovieFromMockApi = async () => {
+    try {
+        const response = await fetch(mockAPIUrl);
+        const data = response.json();
+        return data;
+    }   catch (error) {
+        return error;
+    }
+}
 export const storeMovieMockApi = async (movie) => {
     try {
         const object ={

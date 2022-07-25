@@ -1,6 +1,6 @@
 //Aqué estará la lógica del DOM
 
-import { getMovies, storeMovieMockApi, btnGetMovieFromMockApi } from "./service/index.js";
+import { getMovies, storeMovieMockApi, getMovieFromMockApi } from "./service/index.js";
 
 const btnGetMovies = document.querySelector("#btn-get-movies");
 const containerMovies = document.querySelector("#container-movies");
@@ -30,12 +30,12 @@ btnGetMovies.onclick = async function () {
     
 };
 
-btnGetMovieFromMockApi.onclick = function(){
+btnGetMovieFromMockApi.onclick = async  function(){
     const movies = await getMovieFromMockApi();
     console.log(movies);
 };
 
-btnSaveApi.onclick = function (){
+btnSaveApi.onclick =function (){
     console.log(moviesWithImage);
     moviesWithImage.forEach(async (movie) => {
         await storeMovieMockApi(movie);
