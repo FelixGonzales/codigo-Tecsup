@@ -1,0 +1,23 @@
+#red, #red2{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    z-index: 1;
+}
+#white{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+.container{
+    display: flex;
+    border: 1px solid gray;
+    width: 600px;
+    background-color: gray;
+    z-index: 2px;
+}
+#red:hover{
+    background-color: red;
+    transition: 2s;
+    transform: translate(50px, 50px);
+}

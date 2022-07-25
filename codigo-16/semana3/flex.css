@@ -1,0 +1,25 @@
+.container{
+    /* cuando usamos flex */
+    display:flex;
+    height: 100vh;
+    border: solid 3px;
+    /* Al activar flex activamos sus propiedades */
+
+    /* Alinea los elementos de forma horizontal */
+    /* tiene 3 posibles valores */
+    /* flex-start: */
+    /* center */
+    /* flex-end */
+    /* space-between */
+    /* space-around */
+    /* space-evenly */
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.container div{
+    border:solid red 3px;
+    height: 100px;
+    width: 25%;
+}

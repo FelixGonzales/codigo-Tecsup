@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Condicionales</title>
+    <style class="text/css">
+        .red{
+            color:red;
+        }
+        .blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Martes 21 de Junio</h1>
+    <h2>Condicionales + documento.write( )</h2>
+    <hr>
+</body>
+<script type="text/javascript">
+    //Código de Javascript
+    document.write("<h3>Notas</h3>"); //escribe dentro del HTML
+    let nota = 10;
+    //nota = Number(prompt("Ingrese nota:")); 
+    document.write("<p>" + nota + "</p>");
+    if ( nota < 11 ) {
+        document.write("<p class='red'>Desaprobado</p>");
+    } else {
+        document.write("<p class='blue'>Aprobado</p>");
+    }
+
+    document.write("<hr>");
+
+    //Ángulos
+    document.write("<h3>Ángulos</h3>");
+    let angulo = 390;
+    document.write("<p>" + angulo + "</p>");
+    if (angulo == 0) {
+        document.write("<p>Nulo</p>");
+    } else if (angulo < 90){
+        document.write("<p>Agudo</p>");
+    } else if (angulo == 90){
+        document.write("<p>Recto</p>");
+    } else if (angulo < 180){
+        document.write("<p>Obtuso</p>");
+    } else if (angulo == 180){
+        document.write("<p>Llano</p>");
+    } else if (angulo < 360){
+        document.write("<p>Cóncavo</p>");
+    } else if (angulo == 360){
+        document.write("<p>Completo</p>");
+    } else {
+        document.write("<p>Sin Categoría</p>");
+    }
+
+
+
+    // if (angulo == 0) {
+    //     document.write("<p>Nulo</p>");
+    // }else {
+    //         if (angulo < 90) {
+    //             document.write("<p>Agudo</p>");
+    //         } else {
+    //             if (angulo==90) {
+    //                 document.write("<p>Recto</p>");
+    //             }else {
+    //                 if (angulo < 180) {
+    //                     document.write("<p>Obtuso</p>");
+    //                 } else {
+    //                     if (angulo==180) {
+    //                         document.write("<p>Llano</p>");
+    //                     } else {
+    //                         if (angulo < 360) {
+    //                             document.write("<p>Cóncavo</p>");
+    //                         } else {
+    //                             if (angulo == 360) {
+    //                                 document.write("<p>Completo</p>");
+    //                             } else {
+    //                                 if (angulo > 360) {
+    //                                     document.write("<p>Ángulo de mas de una vuelta</p>");
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    
+
+</script>
+</html>
